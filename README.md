@@ -9,14 +9,14 @@
 
 * Command: $ ./setup-rails-environment.sh
 
-#### Issue Notes
+#### Issue Notes on Nginx Deployment Configuration
 * Change user from `www-data` to `vagrant`;
 * Uncomment line in `/etc/nginx/nginx.conf`
 
   ```html
   passenger_root /usr/lib/ruby/vendor_ruby/phusion_passenger/locations.ini;
   ```
-  
+
 * Add this script to default
 
   ```html
