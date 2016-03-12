@@ -33,32 +33,10 @@ sudo apt-get update -y
 sudo apt-get install git -y
 
 #-----------------------------------------
-# Install wkhtml convertor to pdf or png
-#-----------------------------------------
-echo -e "---- Install wkhtml ----"
-sudo wget http://download.gna.org/wkhtmltopdf/0.12/0.12.2.1/wkhtmltox-0.12.2.1_linux-wheezy-amd64.deb
-sudo dpkg -i wkhtmltox-0.12.2.1_linux-wheezy-amd64.deb
-sudo apt-get -f install -y
-sudo dpkg -i wkhtmltox-0.12.2.1_linux-wheezy-amd64.deb
-echo -e "---- Update wkhtml directory ----"
-sudo cp /usr/local/bin/wkhtmltopdf /usr/bin/wkhtmltopdf
-sudo cp /usr/local/bin/wkhtmltoimage /usr/bin/wkhtmltoimage
-echo -e "---- Remove wkhtmltox-0.12.2.1_linux-wheezy-amd64.deb ----"
-sudo rm wkhtmltox-0.12.2.1_linux-wheezy-amd64.deb
-
-#-----------------------------------------
-# Install Imagemagick
-#-----------------------------------------
-echo -e "---- Install imagemagick ----"
-sudo apt-get install build-essential checkinstall libx11-dev libxext-dev zlib1g-dev libpng12-dev libjpeg-dev libfreetype6-dev libxml2-dev -y
-sudo apt-get build-dep imagemagick -y
-sudo apt-get install imagemagick -y
-
-#-----------------------------------------
 # Install RVM with Ruby v2.2.3 & Rails v4.2.5
 #-----------------------------------------
-RUBY_VERSION="2.2.3"
-echo -e "---- Install RVM with Ruby v2.2.3 & Rails v4.2.5 Into Server ----"
+RUBY_VERSION="2.3.0"
+echo -e "---- Install RVM with Ruby v2.3.0 & Rails Framework Into Server ----"
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev -y
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 -y
 curl -sSL https://rvm.io/mpapis.asc | gpg --import -
@@ -72,7 +50,7 @@ rvm use $RUBY_VERSION --default
 echo -e "---- Disable Download RDoc of Rails Package ----"
 echo "gem: --no-ri --no-rdoc" > ~/.gemrc
 
-RAILS_VERSION="4.2.5"
+RAILS_VERSION="4.2.6"
 echo -e "---- Show Gem List ----"
 gem list
 echo -e "---- Install Rails Framework $RAILS_VERSION ----"

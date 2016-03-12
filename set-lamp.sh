@@ -19,7 +19,7 @@ sudo apt-get install apache2
 echo -e "---- Install MySQL APT Configuration Repository ----"
 wget http://dev.mysql.com/get/mysql-apt-config_0.6.0-1_all.deb
 sudo dpkg -i mysql-apt-config_0.6.0-1_all.deb
-sudo apt-get install mysql-server mysql-client libmysqlclient-dev libapache2-mod-auth-mysql php5-mysql -y
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev php5-mysql -y
 
 echo -e "---- Check MySQL Installation Status ----"
 sudo service mysql restart
