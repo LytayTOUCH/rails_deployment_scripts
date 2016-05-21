@@ -33,9 +33,9 @@ sudo apt-get update -y
 sudo apt-get install git -y
 
 #-----------------------------------------
-# Install RVM with Ruby v2.2.3 & Rails v4.2.5
+# Install RVM with Ruby v2.2.3 & Rails v4.2.6
 #-----------------------------------------
-RUBY_VERSION="2.3.0"
+RUBY_VERSION="2.3.1"
 echo -e "---- Install RVM with Ruby v2.3.0 & Rails Framework Into Server ----"
 sudo apt-get install libgdbm-dev libncurses5-dev automake libtool bison libffi-dev -y
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 -y
