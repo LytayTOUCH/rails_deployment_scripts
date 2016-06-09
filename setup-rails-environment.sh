@@ -28,9 +28,9 @@ sudo apt-get install git-core curl zlib1g-dev libssl-dev libreadline-dev libyaml
 # Install Latest Git
 #-----------------------------------------
 echo -e "---- Install Latest Git Into Server ----"
-sudo add-apt-repository ppa:git-core/ppa -y
-sudo apt-get update -y
-sudo apt-get install git -y
+# sudo add-apt-repository ppa:git-core/ppa -y
+# sudo apt-get update -y
+# sudo apt-get install git -y
 
 #-----------------------------------------
 # Install RVM with Ruby v2.2.3 & Rails v4.2.6
