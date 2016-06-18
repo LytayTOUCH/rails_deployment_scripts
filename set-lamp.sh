@@ -31,7 +31,11 @@ sudo rm mysql-apt-config_0.6.0-1_all.deb
 # Install PHP Modules
 #--------------------------------------
 echo -e "---- Install PHP modules ----"
-sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt -y
+# Php module for ubuntu server 15.10
+# sudo apt-get install php5 libapache2-mod-php5 php5-mcrypt -y
+
+#php module for ubuntu server 16.04
+sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql -y
 
 #--------------------------------------
 # Check PHP Modules Service
